@@ -1,102 +1,110 @@
-📦 Inventory and Data Management System
+# 📦 Inventory and Data Management System
 
-A RESTful backend application built to demonstrate database-driven development, schema validation, advanced querying and aggregation reports, built entirely from scratch without any pre-built admin panel or inventory boilerplate.
+## 🎓 Assignment 3
 
-✨ Features
-Product Schema & Validation: Mongoose schema with field-level validation and a unique SKU.
-Full CRUD Operations: Create, read, update and delete products.
-Filtering, Sorting & Pagination: Query-string based filtering, sorting, field selection and pagination.
-Safe Stock Adjustment: Restock and sale operations that prevent negative stock.
-Low-Stock Alert Report: Lists products that have fallen below their reorder level.
-Category-wise Summary: MongoDB aggregation pipeline for inventory totals per category.
-Centralized Error Handling: Consistent error responses for validation, duplicate and invalid ID errors.
-🛠️ Tech Stack
-Runtime: Node.js
-Framework: Express.js
-Database: MongoDB
-ODM: Mongoose
-Config: dotenv
-Dev Tool: nodemon
-📂 Project Structure
+A backend-based Inventory Management System developed using **Node.js, Express.js, MongoDB, and Mongoose**. This project allows users to manage product records and inventory stock through RESTful APIs.
 
-The codebase follows a clean, modular architecture to ensure maintainability and separation of concerns:
+## 🛠️ Technologies Used
 
-text
-inventory-management/
-├── controllers/         # Request handling logic
-│   └── productController.js
-├── middleware/          # Centralized error handling
-│   └── errorHandler.js
-├── models/              # Mongoose schema and validation
-│   └── Product.js
-├── routes/              # Express API routes
-│   └── productRoutes.js
-├── .env                 # Environment variables (not committed)
-├── .gitignore
-├── package.json         # Dependencies and scripts
-└── server.js            # Server entry point and DB connection
-1. Prerequisites
+- 🟢 **Node.js** – JavaScript runtime environment.
+- 🚀 **Express.js** – Backend web framework.
+- 🍃 **MongoDB** – NoSQL database.
+- 🔗 **Mongoose** – MongoDB object modeling.
+- 🔐 **dotenv** – Environment variable management.
+- 🧪 **Thunder Client** – API testing.
 
-Make sure you have the following installed:
+## ✨ Features
 
-Node.js (v18 or higher)
-MongoDB (Local server or MongoDB Atlas)
-2. Installation
+- ➕ Create new products.
+- 📋 Retrieve all products.
+- 🔍 Retrieve a product by ID.
+- ✏️ Update existing product details.
+- 🗑️ Delete products.
+- 📦 Update product stock.
+- 🏷️ Filter products by category.
+- ↕️ Sort products by price.
+- 📄 Pagination for product listing.
+- ⚠️ Low-stock report.
+- 📊 Inventory summary.
+- ✅ Schema validation and error handling.
 
-Clone the repository and install dependencies:
+## 🔌 API Endpoints
 
-bash
-git clone <your-repository-url>
-cd inventory-management
+**Base URL:** `http://localhost:5000`
+
+| Method | Endpoint | Description |
+|---|---|---|
+| 🟢 GET | `/api/products` | Get all products |
+| 🟡 POST | `/api/products` | Create a product |
+| 🟢 GET | `/api/products/:id` | Get product by ID |
+| 🔵 PUT | `/api/products/:id` | Update product |
+| 🔴 DELETE | `/api/products/:id` | Delete product |
+| 🟠 PATCH | `/api/products/:id/stock` | Update stock |
+| 🟢 GET | `/api/products/low-stock` | Get low-stock products |
+| 🟢 GET | `/api/products/summary` | Get inventory summary |
+
+## ⚙️ Installation and Setup
+
+**1️⃣ Clone or download the project**
+
+Open the project folder in VS Code.
+
+**2️⃣ Install dependencies**
+
+```bash
 npm install
-3. Environment Variables
+```
 
-Create a .env file in the project root:
+**3️⃣ Configure environment variables**
 
-env
+Create a `.env` file in the root directory.
+
+```env
 PORT=5000
-MONGO_URI=mongodb://127.0.0.1:27017/inventory_db
-NODE_ENV=development
-4. Run the Server
-bash
-npm start        # Start the server
-npm run dev      # Start with nodemon (auto-restart)
-🧾 Product Schema
-Field	Type	Rules
-name	String	Required
-sku	String	Required, unique
-category	String	Required
-price	Number	Required, minimum 0
-quantity	Number	Required, minimum 0
-reorderLevel	Number	Required, minimum 0
-supplier	String	Required
-stockValue	Virtual	price × quantity
-API Endpoints
-POST /api/products - Create a product
-GET /api/products - Get all products (filter, sort, paginate)
-GET /api/products/:id - Get a single product
-PUT /api/products/:id - Update product details
-PATCH /api/products/:id/stock - Adjust stock (positive to restock, negative for a sale)
-DELETE /api/products/:id - Delete a product
-GET /api/products/low-stock - Low-stock alert report
-GET /api/products/summary - Category-wise inventory summary
-Query Parameters (GET /api/products)
-page, limit - Pagination (defaults: 1 and 10)
-sort - e.g. sort=-price,name (prefix - for descending)
-fields - e.g. fields=name,price
-category=Electronics - Filter by field value
-price[gte]=100&price[lte]=500 - Range filters (gte, gt, lte, lt)
-Example Request
+MONGO_URI=mongodb://127.0.0.1:27017/inventory
+```
 
-POST /api/products
+**4️⃣ Start the server**
 
-json
-{
-  "name": "Gel Pen Pack of 15",
-  "sku": "STNY-PN-713",
-  "category": "Stationery",
-  "price": 120,
-  "quantity": 40,
-  "reorderLevel": 20,
-  "supplier": "Cello Pens"
-}
+```bash
+npx nodemon server.js
+```
+
+🚀 The server will run at:
+
+`http://localhost:5000`
+
+## 🧪 API Testing
+
+All API endpoints can be tested using Thunder Client in Visual Studio Code.
+
+Testing includes:
+
+- ➕ Creating and retrieving products.
+- ✏️ Updating and deleting products.
+- 📦 Testing stock increase and decrease.
+- ⚠️ Checking negative stock validation.
+- 🔍 Filtering and sorting products.
+- 📄 Testing pagination.
+- 📊 Checking low-stock products and inventory summary.
+
+## 🎯 Learning Outcomes
+
+Through this assignment, I learned:
+
+- 🌐 Building RESTful APIs using Express.js.
+- 🍃 Connecting Node.js applications with MongoDB.
+- 🏗️ Using Mongoose schemas and models.
+- 🔄 Implementing CRUD operations.
+- 📩 Handling HTTP requests and responses.
+- 🔐 Managing environment variables.
+- 🧪 Testing APIs using Thunder Client.
+- ✅ Implementing validation and error handling.
+
+## 🏁 Conclusion
+
+This assignment helped me understand backend development and database management by building an Inventory Management System using Node.js, Express.js, and MongoDB.
+
+---
+
+⭐ **Developed as part of Assignment 3 – Backend Development Practice.**
