@@ -108,3 +108,23 @@ This assignment helped me understand backend development and database management
 ---
 
 ⭐ **Developed as part of Assignment 3 – Backend Development Practice.**
+
+<img width="1917" height="1078" alt="image" src="https://github.com/user-attachments/assets/3ffa7205-2c3e-4f4a-a9ee-0fbf1baf18be" />
+
+<img width="1917" height="1078" alt="image" src="https://github.com/user-attachments/assets/3c926cc7-7ed0-40a4-a98f-6658b4a442c7" />
+
+<img width="1917" height="1078" alt="image" src="https://github.com/user-attachments/assets/f3ce9382-6ce6-4d3b-a218-adbb6d2c13f1" />
+
+<img width="1917" height="1078" alt="image" src="https://github.com/user-attachments/assets/aaf66af6-b745-45e5-80ac-77f577f0c79d" />
+
+<img width="1917" height="1078" alt="image" src="https://github.com/user-attachments/assets/3319aef4-8e81-4cb9-bfa0-57086365681a" />
+
+<img width="1917" height="1078" alt="image" src="https://github.com/user-attachments/assets/e65f360c-06f4-4895-805c-a52f27609df2" />
+
+<img width="1917" height="1078" alt="image" src="https://github.com/user-attachments/assets/1166be15-d307-41c8-810e-9d1f059ce58c" />
+
+<img width="1917" height="1078" alt="image" src="https://github.com/user-attachments/assets/9f240e9e-5d61-40b6-9980-5e5080d42779" />
+
+<img width="1917" height="1078" alt="image" src="https://github.com/user-attachments/assets/3c887a5a-86a4-4400-9b46-22ec62b45579" />
+
+
